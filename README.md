@@ -7,7 +7,7 @@ Welcome to the VitaLife Recipe Website! This project is a web application that a
 ## Features
 
 - Search for recipes by ingredients or dish name.
-- View detailed recipe information, including ingredients and instructions.
+- View detailed recipe information, including ingredients.
 - Responsive design for a seamless experience on different devices.
 
 ## Technologies Used
@@ -16,16 +16,3 @@ Welcome to the VitaLife Recipe Website! This project is a web application that a
 - Backend: Node.js, Express
 - Recipe Data: Edamam Recipe API
 
-## Getting Started
-
-### Prerequisites
-
-- Node.js and npm (Node Package Manager) must be installed on your machine.
-
-### Installation
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/msiddique12/VitaLife-Website.git
-   cd VitaLife-Website
