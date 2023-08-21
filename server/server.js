@@ -11,7 +11,7 @@ app.use(cors())
 try{
     app.get('/recipes/:query', async (req, res) => {
         const response = await axios.get(
-            `https://api.edamam.com/search?q=${req.params.query}&app_id=${process.env.APP_ID}&app_key=${process.env.APP_KEY}`
+            `https://api.edamam.com/search?q=${req.params.query}&app_id=${process.env.APP_ID}&app_key=${process.env.APP_KEY}&diet=balanced`
         )
         //onsole.log(response.data.hits)
         res.json(response.data.hits)

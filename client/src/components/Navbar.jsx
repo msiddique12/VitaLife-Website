@@ -18,7 +18,6 @@ const Navbar = () => {
             <div className="container mx-auto flex justify-end items-center">
             <div className="hidden sm:flex space-x-1">
                 <Link to="/" className='p-4 text-[#FFBA86] hover:text-[#F6635C]'>Home</Link>
-                <Link to="/recipes" className='p-4 text-[#FFBA86] hover:text-[#F6635C]'>Recipes</Link>
                 <Link to="/search" className='p-4 text-[#FFBA86] hover:text-[#F6635C]'>Search</Link>
                 <Link to="/about" className='p-4 text-[#FFBA86] hover:text-[#F6635C]'>About</Link>
             </div>
@@ -31,7 +30,6 @@ const Navbar = () => {
                 {isDropdownOpen && (
                 <div className="absolute right-0 mt-2 py-2 w-48 bg-[#e3d7a1] rounded-lg shadow-lg">
                     <Link to="/" className='block px-4 py-2 text-gray-800 hover:bg-gray-200 hover:text-[#F6635C]'>Home</Link>
-                    <Link to="/recipes" className='block px-4 py-2 text-gray-800 hover:bg-gray-200 hover:text-[#F6635C]'>Recipes</Link>
                     <Link to="/search" className='block px-4 py-2 text-gray-800 hover:bg-gray-200 hover:text-[#F6635C]'>Search</Link>
                     <Link to="/about" className='block px-4 py-2 text-gray-800 hover:bg-gray-200 hover:text-[#F6635C]'>About</Link>
                 </div> 

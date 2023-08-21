@@ -6,7 +6,8 @@ import axios from 'axios'
 const Search = () => {
   const [recipes, setRecipes] = useState([])
   const [search, setSearch] = useState('');
-  const [query, setQuery] = useState('chicken')
+  const [query, setQuery] = useState('featured')
+  const [showResults, setShowResults] = useState(false)
 
   const getRecipes = async () => {
     const response = await axios.get(
@@ -14,6 +15,8 @@ const Search = () => {
     )
     //console.log(response.data)
     setRecipes(response.data)
+    setShowResults(true)
+    
   }
 
   useEffect(() => {
@@ -33,16 +36,18 @@ const Search = () => {
         <input className='search-bar w-1/2 border-none p-5 mt-5' type='text' value={search} onChange={e => setSearch(e.target.value)}/>
         <button className='search-button bg-[#FFBA86] border-none p-5 space-x-20 text-white mt-5' type='submit'>Search</button>
       </form>
-      <div className='flex justify-around flex-wrap'>
-        {recipes.map(recipe => (
-          <Recipe 
-            key={recipe.recipe.label}
-            title={recipe.recipe.title}
-            image={recipe.recipe.image}
-            ingredients={recipe.recipe.ingredients}
-          />
-        ))}
-      </div>
+      {showResults && (
+        <div className='flex justify-around flex-wrap'>
+          {recipes.map(recipe => (
+            <Recipe 
+              key={recipe.recipe.label}
+              title={recipe.recipe.title}
+              image={recipe.recipe.image}
+              ingredients={recipe.recipe.ingredients}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }
