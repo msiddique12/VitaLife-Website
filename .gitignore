@@ -25,7 +25,6 @@ dist-ssr
 
 .env
 
-node_modules
 /.pnp
 .pnp.js
 
